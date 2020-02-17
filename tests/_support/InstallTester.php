@@ -157,10 +157,22 @@ class InstallTester extends Actor
     public function dontSeeErrors()
     {
         $I = $this;
-        $I->dontSee('Warning');
-        $I->dontSee('Notice');
-        $I->dontSee('Error');
-        $I->dontSee('error');
+        if ($I->dontSee('Warning'))
+        {
+            codecept_debug($I);
+        }
+        if ($I->dontSee('Notice'))
+        {
+            codecept_debug($I);
+        }
+        if ($I->dontSee('Error'))
+        {
+            codecept_debug($I);
+        }
+        if ($I->dontSee('error'))
+        {
+            codecept_debug($I);
+        }
     }
 
     protected function isOldPhpVersionDetected()
