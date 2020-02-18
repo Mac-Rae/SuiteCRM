@@ -156,25 +156,31 @@ class InstallTester extends Actor
 
     public function dontSeeErrors()
     {
+        printf('- This is the DEBUG output!');
+        printf('- This is the DEBUG output!');
+        printf('- This is the DEBUG output!');
+        printf('- This is the DEBUG output!');
+        printf('- This is the DEBUG output!');
+        printf('- This is the DEBUG output!');
         $I = $this;
         if ($I->dontSee('Warning'))
         {
-            printf('This is the DEBUG output!');
+            printf('1. This is the DEBUG output!');
             print_r($I);
         }
         if ($I->dontSee('Notice'))
         {
-            printf('This is the DEBUG output!');
+            printf('2. This is the DEBUG output!');
             print_r($I);
         }
         if ($I->dontSee('Error'))
         {
-            printf('This is the DEBUG output!');
+            printf('3. This is the DEBUG output!');
             print_r($I);
         }
         if ($I->dontSee('error'))
         {
-            printf('This is the DEBUG output!');
+            printf('4. This is the DEBUG output!');
             print_r($I);
         }
     }
