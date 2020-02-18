@@ -159,19 +159,23 @@ class InstallTester extends Actor
         $I = $this;
         if ($I->dontSee('Warning'))
         {
-            codecept_debug($I);
+            printf('This is the DEBUG output!');
+            print_r($I);
         }
         if ($I->dontSee('Notice'))
         {
-            codecept_debug($I);
+            printf('This is the DEBUG output!');
+            print_r($I);
         }
         if ($I->dontSee('Error'))
         {
-            codecept_debug($I);
+            printf('This is the DEBUG output!');
+            print_r($I);
         }
         if ($I->dontSee('error'))
         {
-            codecept_debug($I);
+            printf('This is the DEBUG output!');
+            print_r($I);
         }
     }
 
