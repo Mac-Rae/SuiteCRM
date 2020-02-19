@@ -253,6 +253,15 @@ foreach ($beanFiles as $bean => $file) {
 
     $table_name = $focus->table_name;
     echo "Object checking $table_name";
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
+    echo 'TEST OUTPUT';
     //installStatus(sprintf($mod_strings['STAT_CREATE_DB_TABLE'], $focus->table_name ));
     installLog("processing table ".$focus->table_name);
     // check to see if we have already setup this table
