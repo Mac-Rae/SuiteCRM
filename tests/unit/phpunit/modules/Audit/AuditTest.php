@@ -16,17 +16,23 @@ class AuditTest extends SuitePHPUnitFrameworkTestCase
 
     public function testAudit()
     {
+        echo 'Point 1';
         // Execute the constructor and check for the Object type and  attributes
         $audit = BeanFactory::newBean('Audit');
+        echo 'Point 2';
         echo '========================';
         echo '========================';
         echo $audit;
         echo '========================';
         echo '========================';
         $this->assertInstanceOf('Audit', $audit);
+        echo 'Point 3';
         $this->assertInstanceOf('SugarBean', $audit);
+        echo 'Point 4';
         $this->assertAttributeEquals('Audit', 'module_dir', $audit);
+        echo 'Point 5';
         $this->assertAttributeEquals('Audit', 'object_name', $audit);
+        echo 'Point 6';
     }
 
     public function testget_summary_text()
