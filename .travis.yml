@@ -20,7 +20,7 @@ matrix:
     - name: "code coverage"
       php: "7.3"
       dist: xenial
-      script: ./vendor/bin/codecept run install --env travis-ci-hub -f --ext DotReporter; ./vendor/bin/robo code:coverage --ci; cat codeception.dist.yml; bash <(curl -s https://codecov.io/bash) -f tests/_output/coverage.xml
+      script: ./vendor/bin/codecept run --debug install --env travis-ci-hub -f --ext DotReporter; ./vendor/bin/robo code:coverage --ci; cat codeception.dist.yml; bash <(curl -s https://codecov.io/bash) -f tests/_output/coverage.xml
 
 services:
   - mysql
