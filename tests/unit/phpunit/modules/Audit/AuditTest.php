@@ -22,7 +22,7 @@ class AuditTest extends SuitePHPUnitFrameworkTestCase
         echo 'Point 2';
         echo '========================';
         echo '========================';
-        echo $audit;
+        echo "This is the value of audit: $audit";
         echo '========================';
         echo '========================';
         $this->assertInstanceOf('Audit', $audit);
