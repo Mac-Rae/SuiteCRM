@@ -157,7 +157,6 @@ class InstallTester extends Actor
     public function dontSeeErrors()
     {
         $I = $this;
-        $I->comment($I->grabPageSource());
         $I->dontSee('Warning');
         $I->dontSee('Notice');
         $I->dontSee('Error');
