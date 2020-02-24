@@ -168,11 +168,11 @@ class InstallTester extends Actor
             printf('1. This is the DEBUG output!');
             print_r($I);
         }
-//        if ($I->dontSee('Notice'))
-//        {
-//            printf('2. This is the DEBUG output!');
-//            print_r($I);
-//        }
+        if ($I->dontSee('Notice'))
+        {
+            printf('2. This is the DEBUG output!');
+            print_r($I);
+        }
         if ($I->dontSee('Error'))
         {
             printf('3. This is the DEBUG output!');
