@@ -2623,7 +2623,7 @@ class SugarBeanTest extends SuitePHPUnitFrameworkTestCase
     /**
      * @see SugarBean::cleanBean()
      */
-    public function testCleanBean()
+    public function wsdtestCleanBean()
     {
         // test
         $bean = BeanFactory::newBean('Contacts');

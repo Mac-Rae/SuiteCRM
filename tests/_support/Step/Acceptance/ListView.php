@@ -48,7 +48,7 @@ class ListView extends Tester
     public function waitForListViewVisible()
     {
         $I = $this;
-        $I->waitForElementVisible('.listViewBody', 120);
+        $I->waitForElementVisible('.listViewBody');
     }
 
     public function waitForFilterModalVisible()

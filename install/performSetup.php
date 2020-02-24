@@ -261,7 +261,7 @@ foreach ($beanFiles as $bean => $file) {
         }
         if (!in_array($bean, $nonStandardModules)) {
             require_once("modules/".$focus->module_dir."/vardefs.php"); // load up $dictionary
-            echo "This is the module dir - $focus->module_dir";
+            $test123456789=$focus->module_dir;
             if (isset($dictionary[$focus->object_name]['table']) && $dictionary[$focus->object_name]['table'] === 'does_not_exist') {
                 continue; // support new vardef definitions
             }
@@ -295,6 +295,7 @@ foreach ($beanFiles as $bean => $file) {
         installerHook('post_createModuleTable', array('module' => $focus->getObjectName()));
         echo ".";
     } // end if()
+    echo '$test123456789';
 }
 
 
