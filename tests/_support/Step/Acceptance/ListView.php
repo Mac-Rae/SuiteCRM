@@ -53,7 +53,7 @@ class ListView extends Tester
 
     public function waitForFilterModalVisible()
     {
-        $I = $this;0
+        $I = $this;
         $I->waitForElementVisible('#searchDialog');
     }
 
