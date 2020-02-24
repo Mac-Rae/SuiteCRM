@@ -18,6 +18,11 @@ class AuditTest extends SuitePHPUnitFrameworkTestCase
     {
         // Execute the constructor and check for the Object type and  attributes
         $audit = BeanFactory::newBean('Audit');
+        echo '========================';
+        echo '========================';
+        echo $audit;
+        echo '========================';
+        echo '========================';
         $this->assertInstanceOf('Audit', $audit);
         $this->assertInstanceOf('SugarBean', $audit);
         $this->assertAttributeEquals('Audit', 'module_dir', $audit);
