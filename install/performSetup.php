@@ -254,16 +254,13 @@ foreach ($beanFiles as $bean => $file) {
     $table_name = $focus->table_name;
     //installStatus(sprintf($mod_strings['STAT_CREATE_DB_TABLE'], $focus->table_name ));
     installLog("processing table ".$focus->table_name);
-    echo "processing table $focus->table_nam";
     // check to see if we have already setup this table
     if (!in_array($table_name, $processed_tables)) {
         if (!file_exists("modules/".$focus->module_dir."/vardefs.php")) {
             continue;
         }
         if (!in_array($bean, $nonStandardModules)) {
-            echo "modules $focus->module_dir";
             require_once("modules/".$focus->module_dir."/vardefs.php"); // load up $dictionary
-            echo "Object checking $focus->object_name";
             if (isset($dictionary[$focus->object_name]['table']) && $dictionary[$focus->object_name]['table'] === 'does_not_exist') {
                 continue; // support new vardef definitions
             }
