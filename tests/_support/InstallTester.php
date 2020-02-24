@@ -163,14 +163,13 @@ class InstallTester extends Actor
         $I->comment('- This is the DEBUG output!');
         $I->comment('- This is the DEBUG output!');
         $I->comment('- This is the DEBUG output!');
-        $I->comment($I);
 
         if ($I->dontSee('Warning'))
         {
             $I->comment('1. This is the DEBUG output!');
             $I->comment($I);
         }
-        if ($I->dontSee('Notice'))
+        if ( !$I->dontSee('Notice'))
         {
             $I->comment('2. This is the DEBUG output!');
             $I->comment($I);
