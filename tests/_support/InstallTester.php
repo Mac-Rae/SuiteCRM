@@ -163,7 +163,6 @@ class InstallTester extends Actor
         $I->comment('- This is the DEBUG output!');
         $I->comment('- This is the DEBUG output!');
         $I->comment('- This is the DEBUG output!');
-        $I->comment($I->grabPageSource());
 
         if ($I->dontSee('Warning'))
         {
