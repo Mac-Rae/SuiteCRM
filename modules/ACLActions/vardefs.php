@@ -44,8 +44,10 @@ if (!defined('sugarEntry') || !sugarEntry) {
 
 
 
-$dictionary['ACLAction'] = array('table' => 'acl_actions', 'comment' => 'Determine the allowable actions available to users'
-                               ,'fields' => array(
+$dictionary['ACLActions'] = array(
+    'table' => 'acl_actions',
+    'comment' => 'Determine the allowable actions available to users',
+    'fields' => array(
   'id' =>
   array(
     'name' => 'id',
