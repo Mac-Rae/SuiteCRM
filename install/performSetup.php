@@ -261,6 +261,9 @@ foreach ($beanFiles as $bean => $file) {
         }
         if (!in_array($bean, $nonStandardModules)) {
             require_once("modules/".$focus->module_dir."/vardefs.php"); // load up $dictionary
+            echo "THIS IS THE VALUE YOUR LOOKING FOR - $focus->module_dir";
+            printf("THIS IS THE VALUE YOUR LOOKING FOR - $focus->module_dir");
+            codecept_debug("THIS IS THE VALUE YOUR LOOKING FOR - $focus->module_dir");
             if ($dictionary[$focus->object_name]['table'] == 'does_not_exist') {
                 continue; // support new vardef definitions
             }
