@@ -40,7 +40,10 @@
  * reasonably feasible for technical reasons, the Appropriate Legal Notices must
  * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
-
+$sugar_config['maintenance']=true;
+if (isset($sugar_config['maintenance']) && $sugar_config['maintenance']) {
     print("<html><body>");
-    print("Down for maintenance.");
-    print("</body></html>");
+    print('Down for maintenance.');
+    print('</body></html>');
+    suite_exit();
+}
